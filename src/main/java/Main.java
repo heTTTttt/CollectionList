@@ -14,6 +14,8 @@ public class Main {
         listStr.add("Hi");
         listStr.add("Calculate");
         listStr.add("Calculate");
+        listStr.add("Calculate");
+        listStr.add("Calculate");
         listStr.add("Bye");
         listStr.add("Bye");
         listStr.add("Cool");
@@ -33,11 +35,17 @@ public class Main {
 
         ListMethods listMethods = new ListMethods();
 
+        System.out.println("--------------------------");
+        System.out.println("Method countOccurrence: ");
+        listMethods.countOccurrence(listStr, "Calculate"); //method countOccurrence
+        System.out.println("--------------------------");
         System.out.println("To array: " + Arrays.toString(str));
-        System.out.println("To list: " + listMethods.toList(str));
+        System.out.println("To list: " + listMethods.toList(str)); //method toList
         System.out.println("--------------------------");
-//        listMethods.findUnique(listNum);
+        System.out.println("List of unique numbers: ");
+        listMethods.findUnique(listNum);
         System.out.println("--------------------------");
+        System.out.println("Method calcOccurance: ");
         listMethods.calcOccurance(listStr);
 
     }

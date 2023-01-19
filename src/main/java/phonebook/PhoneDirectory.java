@@ -1,2 +1,4 @@
-package phonebook;public class PhoneDirectory {
+package phonebook;
+
+public class PhoneDirectory {
 }

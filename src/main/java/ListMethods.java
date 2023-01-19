@@ -2,15 +2,26 @@ import java.util.*;
 
 public class ListMethods {
 
-    void countOccurrence() {
-
+    // task 1;
+    void countOccurrence(List<String> list, String word) {
+        int count = 0;
+        for (String s : list) {
+            if (Objects.equals(word, s)) {
+                count++;
+                System.out.println(word + " = " + count);
+            }
+        }
     }
 
+    // task 2;
     public <T> List<T> toList(T[] arr) {
         return new ArrayList<>(Arrays.asList(arr));
     }
 
+    // task 3;
     public void findUnique(List<Integer> array) {
+
+        List<Integer> list = new ArrayList<>();
         int result;
         int countUnique = 0;
         int count = 0;
@@ -22,16 +33,21 @@ public class ListMethods {
                     count++;
                 }
                 if (!Objects.equals(array.get(j), array.get(i))) {
-                    integer = array.get(i);
+                    integer = array.get(i - count);
+                    list.add(integer);
                 }
             }
-            System.out.println(integer);
         }
         result = countUnique - count;
-        //System.out.println(result);
-        //System.out.println(integer + " " + array);
+        System.out.println("----------------------");
+        System.out.println(result); // unique numbers;
+        System.out.println("----------------------");
+        System.out.println(list + " " + array);
+        System.out.println("----------------------");
+        System.out.println(integer);
     }
 
+    // task 4;
     void calcOccurance(List<String> list) {
 
         String text = list.toString();
@@ -65,6 +81,7 @@ public class ListMethods {
 //            System.out.println(" " + map);
 
 
+    // task 5;
     void findOccurance() {
 
     }
