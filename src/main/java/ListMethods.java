@@ -22,6 +22,7 @@ public class ListMethods {
     public void findUnique(List<Integer> array) {
 
         List<Integer> list = new ArrayList<>();
+
         int result;
         int countUnique = 0;
         int count = 0;
@@ -33,8 +34,9 @@ public class ListMethods {
                     count++;
                 }
                 if (!Objects.equals(array.get(j), array.get(i))) {
-                    integer = array.get(i - count);
+                    integer = array.get(i);
                     list.add(integer);
+                    list.remove(i);
                 }
             }
         }
@@ -48,7 +50,7 @@ public class ListMethods {
     }
 
     // task 4;
-    void calcOccurance(List<String> list) {
+    void calcOccurrence(List<String> list) {
 
         String text = list.toString();
 
@@ -80,9 +82,24 @@ public class ListMethods {
 //            }
 //            System.out.println(" " + map);
 
-
     // task 5;
-    void findOccurance() {
+    public void findOccurrence(List<String> list) {
+        String text = list.toString();
 
+        Map<String, Integer> map = new HashMap<>();
+
+        String[] words = text.split(" ");
+        int value = 0;
+
+        for (String word : words) {
+            Integer integer = map.get(word);
+            if (integer == null) {
+                value = 1;
+            } else {
+                value = ++integer;
+            }
+            map.put(word, value);
+        }
+        System.out.println(" " + map);
     }
 }

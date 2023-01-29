@@ -46,7 +46,7 @@ public class Main {
         listMethods.findUnique(listNum);
         System.out.println("--------------------------");
         System.out.println("Method calcOccurance: ");
-        listMethods.calcOccurance(listStr);
+        listMethods.calcOccurrence(listStr);
 
     }
 }

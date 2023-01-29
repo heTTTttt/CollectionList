@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65cfd5f0-344b-4c9a-9390-9d0ac34eeb1f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/phonebook/PhoneDirectory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/phonebook/Record.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ListConstructor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/phonebook/ContactDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ListMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ListMethods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/phonebook/Record.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/phonebook/Record.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
