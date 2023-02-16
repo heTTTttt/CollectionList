@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class ListMethods {
 
@@ -19,34 +20,11 @@ public class ListMethods {
     }
 
     // task 3;
-    public void findUnique(List<Integer> array) {
-
-        List<Integer> list = new ArrayList<>();
-
-        int result;
-        int countUnique = 0;
-        int count = 0;
-        Integer integer = 0;
-        for (int i = 0; i < array.size(); i++) {
-            countUnique++;
-            for (int j = i + 1; j < array.size(); j++) {
-                if (Objects.equals(array.get(j), array.get(i))) {
-                    count++;
-                }
-                if (!Objects.equals(array.get(j), array.get(i))) {
-                    integer = array.get(i);
-                    list.add(integer);
-                    list.remove(i);
-                }
-            }
-        }
-        result = countUnique - count;
-        System.out.println("----------------------");
-        System.out.println(result); // unique numbers;
-        System.out.println("----------------------");
-        System.out.println(list + " " + array);
-        System.out.println("----------------------");
-        System.out.println(integer);
+    public List<Integer> findUnique(List<Integer> numbers) {
+        List<Integer> uniqueNumbers = numbers.stream()
+                .filter(i -> java.util.Collections.frequency(numbers, i) == 1)
+                .collect(Collectors.toList());
+        return uniqueNumbers;
     }
 
     // task 4;
@@ -83,23 +61,19 @@ public class ListMethods {
 //            System.out.println(" " + map);
 
     // task 5;
-    public void findOccurrence(List<String> list) {
-        String text = list.toString();
-
-        Map<String, Integer> map = new HashMap<>();
-
-        String[] words = text.split(" ");
-        int value = 0;
-
-        for (String word : words) {
-            Integer integer = map.get(word);
-            if (integer == null) {
-                value = 1;
+    public List<Word> findOccurrence(List<String> wordList) {
+        Map<String, Integer> occurrenceMap = new HashMap<>(); //створюємо Map, де ключ - слово, значення - кількість його повторень
+        for (String word : wordList) {
+            if (occurrenceMap.containsKey(word)) {
+                occurrenceMap.put(word, occurrenceMap.get(word) + 1); //якщо слово вже зустрічалося, збільшуємо його лічильник на 1
             } else {
-                value = ++integer;
+                occurrenceMap.put(word, 1); //якщо слово вперше зустріли, додаємо його до Map з лічильником 1
             }
-            map.put(word, value);
         }
-        System.out.println(" " + map);
+        List<Word> result = new ArrayList<>(); //створюємо список результатів
+        for (Map.Entry<String, Integer> entry : occurrenceMap.entrySet()) {
+            result.add(new Word(entry.getKey(), entry.getValue())); //перетворюємо кожен запис Map у відповідний об'єкт Word і додаємо його до списку результатів
+        }
+        return result;
     }
 }

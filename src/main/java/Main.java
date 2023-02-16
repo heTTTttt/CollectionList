@@ -26,6 +26,7 @@ public class Main {
 
         List<Integer> listNum = new ArrayList<>();
         listNum.add(13);listNum.add(32);listNum.add(55);listNum.add(42);
+        listNum.add(42);listNum.add(43);listNum.add(44);
         listNum.add(43);listNum.add(44);listNum.add(10);
         listNum.add(5);listNum.add(5);listNum.add(5);
 
@@ -43,10 +44,13 @@ public class Main {
         System.out.println("To list: " + listMethods.toList(str)); //method toList
         System.out.println("--------------------------");
         System.out.println("List of unique numbers: ");
-        listMethods.findUnique(listNum);
+        System.out.println(listMethods.findUnique(listNum));
         System.out.println("--------------------------");
         System.out.println("Method calcOccurance: ");
         listMethods.calcOccurrence(listStr);
+        System.out.println("--------------------------");
+        System.out.println("Method findOccurrence: ");
+        System.out.println(listMethods.findOccurrence(listStr));
 
     }
 }
